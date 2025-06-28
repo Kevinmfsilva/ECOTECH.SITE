@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoTech Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <header>
+    <h1>EcoTech Game ♻️</h1>
+  </header>
+
+  <main>
+    <section class="instrucoes">
+      <h2>Arraste os itens para a lixeira correta!</h2>
+      <p>Cada tipo de lixo tem seu lugar certo 💡</p>
+    </section>
+
+    <section class="jogo">
+      <div class="lixeiras">
+        <div class="lixeira" data-tipo="reciclavel">♻️<br>Reciclável</div>
+        <div class="lixeira" data-tipo="eletronico">🔌<br>Eletrônico</div>
+        <div class="lixeira" data-tipo="remedio">💊<br>Remédio</div>
+      </div>
+
+      <div class="itens">
+        <div class="item" draggable="true" data-tipo="reciclavel">📦 Papelão</div>
+        <div class="item" draggable="true" data-tipo="reciclavel">🥤 Garrafa PET</div>
+        <div class="item" draggable="true" data-tipo="reciclavel">📰 Jornal</div>
+
+        <div class="item" draggable="true" data-tipo="eletronico">🔋 Pilha</div>
+        <div class="item" draggable="true" data-tipo="eletronico">💻 Notebook velho</div>
+        <div class="item" draggable="true" data-tipo="eletronico">📱 Celular quebrado</div>
+
+        <div class="item" draggable="true" data-tipo="remedio">💊 Cápsula</div>
+        <div class="item" draggable="true" data-tipo="remedio">🧴 Xarope</div>
+        <div class="item" draggable="true" data-tipo="remedio">🩹 Curativo vencido</div>
+      </div>
+
+      <div class="resultado" id="mensagem">Arraste os itens!</div>
+    </section>
+  </main>
+
+  <footer>© EcoTech</footer>
+
+  <script src="game.js"></script>
+</body>
+</html>

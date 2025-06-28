@@ -1,0 +1,61 @@
+/* coleta.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f8e9;
+    color: #1b1b1b;
+  }
+  
+  header {
+    background-color: #7cb342;
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  main {
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .formulario {
+    background: #dcedc8;
+    padding: 2em;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  
+  .formulario label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+  
+  .formulario input {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1.2em;
+    border: 1px solid #a5d6a7;
+    border-radius: 5px;
+  }
+  
+  .formulario button {
+    background: #558b2f;
+    color: white;
+    padding: 1em;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .formulario button:hover {
+    background: #33691e;
+  }
+  

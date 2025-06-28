@@ -1,0 +1,100 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: color(srgb red green blue);
+  background-size: cover;
+  color: #1b1b1b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+  #particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  header {
+    background: #7d2e65cc;
+    color: white;
+    padding: 1.2em 1em;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #9c0495, 0 0 20px #af4caf;
+    animation: pulse 3s infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      text-shadow: 0 0 10px #a0f0a0, 0 0 20px #4caf50;
+    }
+    50% {
+      text-shadow: 0 0 15px #76ff03, 0 0 30px #00e676;
+    }
+  }
+  
+  
+  main {
+    padding: 2em;
+  }
+  
+  .texto {
+    background: #fff9c4;
+    padding: 1.5em;
+    border-radius: 10px;
+    font-size: 1.2em;
+    text-align: justify;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  footer {
+    background: #7d2e65cc;
+    color: white;
+    padding: 1.2em 1em;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+  
+    .perfil span {
+      display: none !important;
+    }
+  
+    .perfil {
+      top: 10px;
+      right: 10px;
+      gap: 0;
+    }
+  
+    .perfil img {
+      width: 44px;
+      height: 44px;
+    }
+  
+    nav a {
+      font-size: 1rem;
+      padding: 0.9em 1.2em;
+    }
+  }
+  

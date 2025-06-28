@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scanner - EcoTech</title>
+  <link rel="stylesheet" href="scanner.css" />
+</head>
+<body>
+  <header>
+    <h1>EcoTech - Scanner</h1>
+    
+  </header>
+
+  <main>
+    <section class="mensagem-impacto">
+      <h2>Scanner da Lixeira</h2>
+      <p>
+        Nosso scanner inteligente está em desenvolvimento! Enquanto isso, divirta-se com o jogo abaixo e aprenda a separar seus resíduos corretamente!
+      </p>
+    </section>
+
+    <section class="jogo-reciclagem">
+      <h3>Jogo de Reciclagem</h3>
+      <p>Arraste os itens para a lixeira correta:</p>
+      <div class="lixeiras">
+        <div class="lixeira" data-tipo="reciclavel">♻️ Reciclável</div>
+        <div class="lixeira" data-tipo="remedio">💊 Remédio</div>
+        <div class="lixeira" data-tipo="eletronico">🔌 Eletrônico</div>
+      </div>
+
+      <div class="itens">
+        <div class="item" draggable="true" data-tipo="reciclavel">Garrafas PET</div>
+        <div class="item" draggable="true" data-tipo="remedio">Embalagem de remédio</div>
+        <div class="item" draggable="true" data-tipo="eletronico">Fio e carregador</div>
+        <div class="item" draggable="true" data-tipo="reciclavel">Papelão</div>
+        <div class="item" draggable="true" data-tipo="remedio">Comprimidos</div>
+        <div class="item" draggable="true" data-tipo="eletronico">Bateria</div>
+      </div>
+
+      <div class="resultado"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© EcoTech</p>
+  </footer>
+
+  <script src="scanner.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('fundo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #1b1b1b;
+    line-height: 1.6;
+  }
+  
+  canvas#particles {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  header {
+    background: #7d2e65cc;
+    color: white;
+    padding: 1.2em 1em;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #9c0495, 0 0 20px #af4caf;
+    animation: pulse 3s infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      text-shadow: 0 0 10px #a0f0a0, 0 0 20px #4caf50;
+    }
+    50% {
+      text-shadow: 0 0 15px #76ff03, 0 0 30px #00e676;
+    }
+  }
+  
+  
+    header h1 {
+        margin: 0;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 3rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        text-shadow: 0 0 10px #9c0495, 0 0 20px #af4caf;
+        animation: pulse 3s infinite ease-in-out;
+  }
+  
+  .perfil {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+  }
+  
+  .perfil img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+  }
+  
+  main.conteudo {
+    padding: 2em 1em;
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.85);
+    margin: 2em auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .bloco {
+    margin-bottom: 2em;
+  }
+  
+  .bloco h2, .bloco h3 {
+    color: #2e7d32;
+    margin-bottom: 0.3em;
+  }
+  
+  .bloco ul {
+    list-style-type: disc;
+    padding-left: 1.2em;
+  }
+  
+  footer {
+        background: #7d2e65cc;
+        color: white;
+        padding: 1.2em 1em;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        z-index: 2;
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+  
+    .perfil span {
+      display: none !important;
+    }
+  
+    .perfil {
+      top: 10px;
+      right: 10px;
+      gap: 0;
+    }
+  
+    .perfil img {
+      width: 44px;
+      height: 44px;
+    }
+  
+    nav a {
+      font-size: 1rem;
+      padding: 0.9em 1.2em;
+    }
+  }
+  

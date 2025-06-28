@@ -1,0 +1,61 @@
+/* envolvidos.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fce4ec;
+    color: #1b1b1b;
+  }
+  
+  header {
+    background-color: #d81b60;
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  main {
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pessoas {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .pessoa {
+    text-align: center;
+    background: #f8bbd0;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    width: 200px;
+  }
+  
+  .pessoa img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5em;
+  }
+  
+  .pessoa p {
+    font-weight: bold;
+    margin: 0.5em 0;
+  }
+  
+  .pessoa a {
+    display: inline-block;
+    margin-top: 0.5em;
+    color: white;
+    background: #c2185b;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  
