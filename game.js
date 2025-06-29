@@ -1,55 +1,42 @@
-const itens = document.querySelectorAll('.item');
-const lixeiras = document.querySelectorAll('.lixeira');
-const resultado = document.getElementById('mensagem');
+let itemSelecionado = null;
+const mensagem = document.getElementById('mensagem');
 
-let pontuacao = 0;
-
-itens.forEach(item => {
-  item.addEventListener('dragstart', e => {
-    e.dataTransfer.setData('tipo', item.dataset.tipo);
-    e.dataTransfer.setData('id', item.textContent);
+document.querySelectorAll('.item').forEach(item => {
+  item.addEventListener('click', () => {
+    document.querySelectorAll('.item').forEach(i => i.classList.remove('selected'));
+    itemSelecionado = item;
+    item.classList.add('selected');
+    mensagem.textContent = "Agora toque na lixeira certa";
+    mensagem.style.color = "#333";
   });
 });
 
-lixeiras.forEach(lixeira => {
-  lixeira.addEventListener('dragover', e => {
-    e.preventDefault();
-    const tipoArrastado = e.dataTransfer.getData('tipo');
-    if (tipoArrastado === lixeira.dataset.tipo) {
-      lixeira.style.background = '#a5d6a7';
-    } else {
-      lixeira.style.background = '#ffcdd2';
-    }
-  });
-
-  lixeira.addEventListener('dragleave', () => {
-    lixeira.style.background = '#c8e6c9';
-  });
-
-  lixeira.addEventListener('drop', e => {
-    e.preventDefault();
-    const tipoItem = e.dataTransfer.getData('tipo');
-    const nomeItem = e.dataTransfer.getData('id');
-
-    if (tipoItem === lixeira.dataset.tipo) {
-      resultado.textContent = "✔️ Acertou! Bom trabalho!";
-      resultado.style.color = '#2e7d32';
-
-      const itemElement = [...itens].find(i => i.textContent === nomeItem);
-      if (itemElement) {
-        itemElement.remove();
-      }
-    } else {
-      resultado.textContent = "❌ Item errado! Tente novamente.";
-      resultado.style.color = '#c62828';
+document.querySelectorAll('.lixeira').forEach(lixeira => {
+  lixeira.addEventListener('click', () => {
+    if (!itemSelecionado) {
+      mensagem.textContent = "Primeiro toque em um item!";
+      mensagem.style.color = "#d32f2f";
+      return;
     }
 
-    lixeira.style.background = '#c8e6c9';
+    const tipoItem = itemSelecionado.dataset.tipo;
+    const tipoLixeira = lixeira.dataset.tipo;
 
-    
+    if (tipoItem === tipoLixeira) {
+      mensagem.textContent = "✔️ Acertou!";
+      mensagem.style.color = "#2e7d32";
+      itemSelecionado.remove();
+    } else {
+      mensagem.textContent = "❌ Lixeira errada!";
+      mensagem.style.color = "#c62828";
+    }
+
+    itemSelecionado = null;
+    document.querySelectorAll('.item').forEach(i => i.classList.remove('selected'));
+
     if (document.querySelectorAll('.item').length === 0) {
-      resultado.textContent = "🎉 Parabéns! Você reciclou tudo!";
-      resultado.style.color = '#2e7d32';
+      mensagem.textContent = "🎉 Parabéns! Você reciclou tudo!";
+      mensagem.style.color = "#2e7d32";
     }
   });
 });
