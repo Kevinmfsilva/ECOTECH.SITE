@@ -6,45 +6,13 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  color: #1b1b1b;
-}
-
-#particles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 0;
 }
 
 header {
-  background: #7d2e65cc;
+  background: #2e7d32;
   color: white;
-  padding: 1.2em 1em;
+  padding: 1em;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  z-index: 2;
-}
-
-header h1 {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 3rem;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px #9c0495, 0 0 20px #af4caf;
-  animation: pulse 3s infinite ease-in-out;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    text-shadow: 0 0 10px #a0f0a0, 0 0 20px #4caf50;
-  }
-  50% {
-    text-shadow: 0 0 15px #76ff03, 0 0 30px #00e676;
-  }
 }
 
 main {
@@ -56,76 +24,63 @@ main {
 
 .instrucoes {
   text-align: center;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 .jogo {
   text-align: center;
 }
 
-.lixeiras {
+.itens, .lixeiras {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
-.lixeira {
-  width: 30%;
-  min-width: 120px;
-  background: #c8e6c9;
-  border: 3px solid #388e3c;
-  padding: 1em;
-  border-radius: 10px;
+.item, .lixeira {
+  background: #fff;
+  border: 2px solid #4caf50;
+  padding: 0.8em 1em;
+  border-radius: 8px;
   font-weight: bold;
-  font-size: 1.2em;
+  cursor: pointer;
+  min-width: 120px;
+  text-align: center;
   user-select: none;
 }
 
-.itens {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1em;
-}
-
-.item {
-  background: #fff;
-  border: 2px dashed #4caf50;
-  padding: 0.7em 1em;
-  border-radius: 8px;
-  cursor: grab;
-  font-weight: bold;
-  transition: background 0.3s;
-  width: 140px;
-  text-align: center;
-}
-
-.item:active {
-  background: #dcedc8;
+.item.selected {
+  background-color: #c8e6c9;
+  border-color: #2e7d32;
 }
 
 .resultado {
-  margin-top: 1.5em;
-  font-size: 1.2em;
   font-weight: bold;
-  color: #2e7d32;
+  margin-top: 1em;
+  font-size: 1.1em;
 }
 
 footer {
-  background: #7d2e65cc;
+  background: #2e7d32;
   color: white;
-  padding: 1.2em 1em;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  z-index: 2;
+  padding: 1em;
 }
-
-/* Responsivo */
 @media (max-width: 600px) {
-  .lixeira, .item {
-    width: 90%;
+  .item, .lixeira {
+    font-size: 1.2em;
+    padding: 1em;
+    min-width: 100px;
+    flex: 1 1 40%;
+  }
+
+  header h1, .instrucoes h2 {
+    font-size: 1.5em;
+  }
+
+  .resultado {
+    font-size: 1.2em;
   }
 }
-
